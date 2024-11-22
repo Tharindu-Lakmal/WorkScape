@@ -1,5 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './styles/tailwind.css';
 
 
+/* npm i @headlessui/react @reduxjs/toolkit axios moment react-icons react-redux react-hook-form */
+
+/* colors:
+Primary: #007BFF (Bright Blue)
+Primary-2: #1E293B
+Primary-3: #293548
+
+Accent: #F0F4F8 (Light Grayish White)
+Background: #0F172A
+*/
