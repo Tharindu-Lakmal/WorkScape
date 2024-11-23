@@ -4,7 +4,7 @@
 
 /* Add your custom styles here */
 .btn-blue {
-  @apply bg-brightBlue-100 text-lightWhite-100 py-12 px-24 rounded-large hover:bg-brightBlue-300 hover:text-lightWhite-300 duration-150 ease-in-out;
+  @apply bg-brightBlue-100 text-lightWhite-100 py-12 px-24 rounded-normal hover:bg-brightBlue-300 hover:text-lightWhite-300 duration-150 ease-in-out;
 }
 
 .btn-white {

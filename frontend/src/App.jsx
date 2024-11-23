@@ -1,21 +1,63 @@
 import React from 'react'
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import BlogsHome from './pages/Blogs/BlogsHome'
-import Navbar from './components/Navbar/Navbar'
+import { Route, Routes, Outlet, Navigate, useLocation } from 'react-router-dom'
+// import Home from './pages/Home'
+// import BlogsHome from './pages/Blogs/BlogsHome'
+import { About, AuthPage, Companies, CompanyProfile, FindJobs, JobDetail, UploadJob, UserProfile } from './pages';
+import { Footer, Navbar } from './components';
+
+
+function Layout() {
+
+  const user = true;
+  const location = useLocation();
+
+  return user ? (
+    <Outlet />
+  ) : (
+    <Navigate to = 'userAuth' state={{ from: location }} replace />
+  );
+}
 
 function App() {
 
+  const user = {}
+
   return (
-    <div className="app bg-[#0F172A] h-screen text-[#F0F4F8]">
+    <div className="app">
 
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/BlogHome' element={<BlogsHome />} />
+
+        <Route element = {<Layout />}>
+
+          <Route path='/' element = {<Navigate to = '/find-jobs' replace={true} />} />
+          <Route path='/find-jobs' element = {<FindJobs />} />
+          <Route path='/companies' element = {<Companies />} />
+
+          <Route
+            path={
+              user?.user?.accountType ==="seeker" 
+              ? "/user-profile" : "/user-profile/:id"
+            }
+            element = {<UserProfile />} 
+          />
+          <Route path={"/company-profile"} element = {<CompanyProfile />} />
+          <Route path={"/company-profile/:id"} element = {<CompanyProfile />} />
+          <Route path={"/upload-job"} element = {<UploadJob />} />
+          <Route path={"/job-detail/:id"} element = {<JobDetail />} />
+
+        </Route>
+
+        <Route path={"/about-us"} element = {<About />} />
+        <Route path={"/user-auth"} element = {<AuthPage />} />
+
+        {/* <Route path='/' element={<Home />} />
+        <Route path='/bloghome' element={<BlogsHome />} /> */}
       </Routes>
+
+      <Footer />
 
     </div>
   )
