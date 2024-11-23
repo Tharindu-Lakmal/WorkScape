@@ -21,12 +21,17 @@ export default {
         300: '#ffffff',
       },
       'bgDark': '#0F172A',
+      'bdDarkGray': '#1E293B',
+      'bdDarkLight': '#293548',
     },
     fontFamily: { // Custom fonts
       sans1: ['Montserrat', 'sans-serif'],
       sans2: ['Quicksand', 'sans-serif'],
     },
     extend: {
+      backgroundColor: {
+        customBody: '#0F172A',
+      },
       fontSize: { // Custom font sizes
         small: '14px',
         normal: '16px',
@@ -55,7 +60,14 @@ export default {
         small: '8px',
         normal: '12px',
         large: '32px',
-      }
+      },
+      backdropBlur: {
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
+        '2xl': '24px',
+      },
     },
   },
   plugins: [],
