@@ -35,6 +35,7 @@ export default {
       fontSize: { // Custom font sizes
         small: '14px',
         normal: '16px',
+        medium: '18px',
         large: '32px',
         extralarge: '64px',
       },
@@ -48,8 +49,8 @@ export default {
         '120': '7.5rem',
       },
       letterSpacing: { // Custom letter spacing
-        normal: '0.6px',
-        medium: '0.25em', 
+        normal: '0.4px',
+        medium: '0.2em', 
       },
       lineHeight: { // Custom line height | For example, if the font size is 16px and the line height is 1.5, the calculated line height is 16px × 1.5 = 24px.
         small: '24px',

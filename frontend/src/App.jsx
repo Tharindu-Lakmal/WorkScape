@@ -5,12 +5,14 @@ import { Route, Routes, Outlet, Navigate, useLocation } from 'react-router-dom'
 // import BlogsHome from './pages/Blogs/BlogsHome'
 import { About, AuthPage, Companies, CompanyProfile, FindJobs, JobDetail, UploadJob, UserProfile } from './pages';
 import { Footer, Navbar } from './components';
+import { useSelector } from 'react-redux';
 
 
 function Layout() {
 
-  const user = true;
+  const { user } = useSelector((state) => state.user);
   const location = useLocation();
+  console.log(user);
 
   return user ? (
     <Outlet />

@@ -109,7 +109,7 @@ const Navbar = () => {
     <>
       <div className={`${isOpen ? '' : 'overflow-hidden'} 
       font-sans1 relative max-w-[1920px] mx-auto z-40 xl:px-100 bg-bdDarkGray bg-opacity-100 backdrop-md`}> 
-        <nav className='sm:w-[90%] w-[80%] mx-auto flex items-center justify-between p-8'>
+        <nav className='lg:w-[95%] w-[90%] mx-auto flex items-center justify-between p-8'>
           
           <div className='w-auto'>
             <Link to='/'>
