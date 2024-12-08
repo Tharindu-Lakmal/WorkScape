@@ -53,7 +53,7 @@ function App() {
         </Route>
 
         <Route path={"/about-us"} element = {<About />} />
-        <Route path={"/user-auth"} element = {<AuthPage />} />
+        <Route path={"/userAuth"} element = {<AuthPage />} />
 
         {/* <Route path='/' element={<Home />} />
         <Route path='/bloghome' element={<BlogsHome />} /> */}

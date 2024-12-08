@@ -13,16 +13,17 @@ export default {
     },
     colors: {
       'brightBlue': {
-        100: '#007BFF',
-        300: '#036de0',
+        100: '#007BFF',  //007BFF
+        300: '#036de0',  //036de0
       },
       'lightWhite': {
-        100: '#F0F4F8',
-        300: '#ffffff',
+        100: '#F0F4F8',  //F0F4F8
+        300: '#ffffff',  //ffffff
       },
-      'bgDark': '#0F172A',
-      'bdDarkGray': '#1E293B',
-      'bdDarkLight': '#293548',
+      'bgDark': '#0F172A',  //0F172A
+      'bdDarkGray': '#0F172A',  //1E293B
+      'bdDarkLight': '#293548',  //293548
+      "error": '#ef233c'
     },
     fontFamily: { // Custom fonts
       sans1: ['Montserrat', 'sans-serif'],
@@ -30,7 +31,7 @@ export default {
     },
     extend: {
       backgroundColor: {
-        customBody: '#0F172A',
+        customBody: '#1E293B',  //1E293B
       },
       fontSize: { // Custom font sizes
         small: '14px',
