@@ -17,13 +17,13 @@ function Layout() {
   return user ? (
     <Outlet />
   ) : (
-    <Navigate to = 'userAuth' state={{ from: location }} replace />
+    <Navigate to = '/userAuth' state={{ from: location }} replace />
   );
 }
 
 function App() {
 
-  const user = {}
+  const { user } = useSelector((state) => state.user);
 
   return (
     <div className="app">
