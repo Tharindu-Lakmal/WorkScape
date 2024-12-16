@@ -33,6 +33,9 @@ export default {
       backgroundColor: {
         customBody: '#1E293B',  //1E293B
       },
+      backgroundImage: {
+        'hero': "url('../assets/bgImage.jpg')",
+      },
       fontSize: { // Custom font sizes
         small: '14px',
         normal: '16px',

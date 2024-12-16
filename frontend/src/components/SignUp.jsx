@@ -199,7 +199,7 @@ const SignUp = ({open, setOpen}) => {
                                     {isRegister ? "Already has an account?" : "Do not have an account"}
 
                                     <span
-                                        className='text-sm text-blue-600 ml-2 hover:text-blue-700 hover:font-semibold cursor-pointer'
+                                        className='text-sm text-blue-600 ml-2 hover:underline cursor-pointer'
                                         onClick={() => setIsRegister((prev) => !prev)}
                                     >
                                         {isRegister ? "Login" : "Create Account"}
