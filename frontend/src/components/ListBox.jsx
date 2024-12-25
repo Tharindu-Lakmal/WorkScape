@@ -8,10 +8,10 @@ const ListBox = ({ sort, setSort }) => {
   return (
     <div className='w-[8rem] md:w-[10rem]'>
       <Listbox value={sort} onChange={setSort}>
-        <div className='relative mt-1'>
+        <div className='relative mt-2'>
           <Listbox.Button
             className={
-              "relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm"
+              "relative w-full cursor-default rounded-lg bg-bdDarkLight py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm"
             }
           >
             <span className='block truncate'>{sort}</span>
@@ -30,7 +30,7 @@ const ListBox = ({ sort, setSort }) => {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <Listbox.Options className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
+            <Listbox.Options className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-bdDarkLight py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
               {options.map((op, index) => (
                 <Listbox.Option
                   key={index}

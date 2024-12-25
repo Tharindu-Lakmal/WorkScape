@@ -4,6 +4,10 @@ import CustomButton from './CustomButton';
 import InputText from './InputText';
 import JobCard from './JobCard';
 import ListBox from './ListBox';
+import Header from "./Header";
+import CompanyCard from './CompanyCard';
+import Loading from "./Loading";
+import TextInput from "./TextInput";
 
 export { 
     Navbar,
@@ -12,4 +16,8 @@ export {
     InputText,
     JobCard,
     ListBox,
+    CompanyCard,
+    Header,
+    Loading,
+    TextInput,
 };
