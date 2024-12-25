@@ -38,7 +38,7 @@ const FindJobs = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-full mx-auto">
       <Header
         title='Find Your Dream Job with Ease'
         type='home'
@@ -49,8 +49,8 @@ const FindJobs = () => {
         setLocation={setJobLocation}
       />
 
-      <div className='container mx-auto flex gap-6 2xl:gap-10 md:px-5 py-0 md:py-6 bg-[#f7fdfd]'>
-        <div className='hidden md:flex flex-col w-1/6 h-fit bg-white shadow-sm'>
+      <div className='w-[85%] mx-auto flex gap-6 2xl:gap-10 md:px-5 py-0 md:py-6 bg-customBody'>
+        <div className='hidden md:flex flex-col w-[24%] h-fit p-10 mt-6 rounded bg-bdDarkLight shadow-sm'>
           <p className='text-lg font-semibold text-slate-600'>Filter Search</p>
 
           <div className='py-2'>
@@ -115,14 +115,14 @@ const FindJobs = () => {
               Available
             </p>
 
-            <div className='flex flex-col md:flex-row gap-0 md:gap-2 md:items-center'>
+            <div className='flex flex-col md:flex-row gap-0 md:gap-2 mt-6 md:items-center'>
               <p className='text-sm md:text-base'>Sort By:</p>
 
               <ListBox sort={sort} setSort={setSort} />
             </div>
           </div>
 
-          <div className='w-full flex flex-wrap gap-4'>
+          <div className='w-full flex flex-wrap gap-6 mt-6'>
             {jobs.map((job, index) => (
               <JobCard job={job} key={index} />
             ))}

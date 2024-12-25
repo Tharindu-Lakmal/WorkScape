@@ -20,14 +20,14 @@ const SearchInput = ({ placeholder, icon, value, setValue, styles }) => {
         value={value}
         onChange={(e) => handleChange(e)}
         type='text'
-        className='w-full md:w-64 p-2 outline-none bg-bdDarkLight border-2 border-lightWhite-100/50 rounded text-base'
+        className='w-full md:w-80 p-2 outline-none text-bgDark bg-lightWhite-100 border-2 border-lightWhite-100 rounded-full text-base'
         placeholder={placeholder}
       />
 
-      <AiOutlineCloseCircle
-        className='hidden ml-2 md:flex text-gray-600 opacity-60 text-xl cursor-pointer'
+      {/* <AiOutlineCloseCircle
+        className='hidden ml-2 md:flex text-bgDark/90 text-xxl cursor-pointer'
         onClick={clearInput}
-      />
+      /> */}
     </div>
   );
 };
@@ -49,11 +49,13 @@ const Header = ({
         } flex items-center relative`}
       >
         <div className='w-full z-10'>
-          <div className='mb-16 text-center'>
-            <p className='text-slate-700 leading-normal tracking-normal font-bold text-4xl'>{title}</p>
+          <div className='mb-12 md:mb-16 text-center'>
+            <p className='text-slate-700 leading-[42px] tracking-normal font-bold text-[38px] md:leading-normal md:text-6xl'>{title}</p>
           </div>
 
-          <div className='w-full lg:w-3/5 m-auto flex flex-col md:flex-row items-center justify-center lg:justify-around lg:bg-bdDarkLight px-2 md:px-5 py-2 md:py-5 shadow-2xl rounded-full'>
+          <div className='md:w-full lg:w-fit lg:backdrop-blur-sm m-auto flex flex-col md:flex-row items-center 
+          justify-center lg:justify-center gap-1 md:gap-3 lg:bg-lightWhite-100/10 px-2 md:px-5 py-2 md:py-5 
+          md:shadow-2xl rounded-full'>
             <SearchInput
               placeholder='Job Title or Keywords'
               
@@ -74,7 +76,7 @@ const Header = ({
                 onClick={handleClick}
                 title='Search'
                 containerStyles={
-                  "w-full bg-brightBlue-100 text-lightWhite-100 px-5 py-3 rounded hover:bg-brightBlue-300 focus:potline-none flex-col items-center mt-2"
+                  "w-full  bg-brightBlue-100 text-lightWhite-100 px-5 py-3 rounded-full hover:bg-brightBlue-300 focus:potline-none flex-col items-center lg:mt-0 mt-2"
                 }
               />
             </div>
@@ -85,7 +87,7 @@ const Header = ({
               {popularSearch.map((search, index) => (
                 <span
                   key={index}
-                  className='bg-[#1d4fd826] text-[#1d4ed8] py-1 px-2 rounded-full text-sm md:text-base'
+                  className='outline outline-2 text-lightWhite-100 py-1 px-3 rounded-full text-sm md:text-base'
                 >
                   {search}
                 </span>
